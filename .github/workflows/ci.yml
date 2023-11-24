@@ -42,8 +42,7 @@ jobs:
       with:
           image: sankadilshan/apt-calculator
           tags: latest
-          registry: registry-url.io
-          dockerfile: Dockerfile.ci
+          registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 #    - name: Log in to Docker Hub
