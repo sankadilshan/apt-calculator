@@ -1,4 +1,5 @@
-FROM openjdk:8-jre-alpine
+# syntax=docker/dockerfile:1
+FROM eclipse-temurin:17-jdk-jammy
 
 EXPOSE 8080
 
