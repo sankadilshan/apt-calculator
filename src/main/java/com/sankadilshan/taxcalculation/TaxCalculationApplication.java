@@ -24,5 +24,6 @@ public class TaxCalculationApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         TaxInput taxInput = TaxInput.builder().netAmount(302315d).taxFreeAmount(100000d).build();
         taxController.calculateTax(taxInput);
+        TaxServiceImpl taxService= new TaxServiceImpl();
     }
 }
