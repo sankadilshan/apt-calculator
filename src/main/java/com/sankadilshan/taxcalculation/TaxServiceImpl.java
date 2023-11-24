@@ -18,7 +18,7 @@ public class TaxServiceImpl implements TaxService {
 
     public FinalTaxResponse calculateTax(double amount, double taxFreeAmount) {
         taxMap.clear();
-        caluclateTax(amount, taxFreeAmount);
+        calculateTaxExtended(amount, taxFreeAmount);
         return getEndResponse(taxMap);
     }
 
@@ -37,7 +37,7 @@ public class TaxServiceImpl implements TaxService {
         return FinalTaxResponse.builder().taxResponse(taxMap).totalTax(roundOff).build();
     }
 
-    private void caluclateTax(double netAmount, double taxFreeAmount) {
+    private void calculateTaxExtended(double netAmount, double taxFreeAmount) {
         taxMap.clear();
 
         double amountNotRelief = netAmount - taxFreeAmount;
